@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Photo Gallery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Photo Gallery</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+      <ion-row>
+        @for (photo of photoservice.photos; track photo.filepath;) {
+          <ion-col size="6">
+            <ion-img [src]="photo.webviewPath"></ion-img>
+          </ion-col>
+        }
+      </ion-row>
+  </ion-grid>
+
+  <ion-fab (click)="addPhotoToGallery()" horizontal="center" vertical="bottom" slot="fixed">
+    <ion-fab-button class="fap-butt">
+        <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <app-explore-container name="Photo Gallery"></app-explore-container>
+</ion-content>
