@@ -5,13 +5,14 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/a
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-welcome2',
-  templateUrl: './welcome2.page.html',
-  styleUrls: ['./welcome2.page.scss'],
+  selector: 'app-welcome3',
+  templateUrl: './welcome3.page.html',
+  styleUrls: ['./welcome3.page.scss'],
   standalone: true,
-  imports: [IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton]
 })
-export class Welcome2Page implements OnInit {
+export class Welcome3Page implements OnInit {
+
   private router = inject(Router);
 
   constructor() { }
@@ -19,12 +20,8 @@ export class Welcome2Page implements OnInit {
   ngOnInit() {
   }
 
-  public goToWelcome1() {
-    this.router.navigate(['/welcome']);
-  }
-
-  public goToWelcome3() {
-    this.router.navigate(['/welcome3']);
+  public goToWelcome2() {
+    this.router.navigate(['/welcome2']);
   }
 
 }

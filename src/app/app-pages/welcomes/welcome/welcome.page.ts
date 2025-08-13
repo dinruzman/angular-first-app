@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonButton } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -11,6 +12,7 @@ import { IonContent, IonButton } from '@ionic/angular/standalone';
   imports: [IonButton, IonContent, CommonModule, FormsModule]
 })
 export class WelcomePage implements OnInit {
+  private router = inject(Router);
 
   constructor() { }
 
@@ -18,6 +20,6 @@ export class WelcomePage implements OnInit {
   }
 
   public testAlert(){
-    alert("next");
+    this.router.navigate(['/welcome2']);
   }
 }

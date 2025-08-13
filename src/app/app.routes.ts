@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { TabsPage } from './tabs/tabs.page';
 import { WelcomePage } from './app-pages/welcomes/welcome/welcome.page'
+import { Welcome2Page } from './app-pages/welcomes/welcome2/welcome2.page';
 
 export const routes: Routes = [
   {
@@ -8,15 +9,19 @@ export const routes: Routes = [
     redirectTo: '/tabs',
     pathMatch: 'full',
   },
+  // {
+  //   path: 'welcome2',
+  //   loadComponent: () =>
+  //     import('./app-pages/welcomes/welcome2/welcome2.page').then((m) => m.Welcome2Page),
+  // },
+  {
+    path: 'welcome2',
+    component: Welcome2Page
+  },
   {
     path: 'welcome',
     loadComponent: () => import('./app-pages/welcomes/welcome/welcome.page').then((m) => m.WelcomePage),
     // children: [
-    //   {
-    //     path: 'tab1',
-    //     loadComponent: () =>
-    //       import('./tab1/tab1.page').then((m) => m.Tab1Page),
-    //   },
     //   {
     //     path: 'tab2',
     //     loadComponent: () =>
@@ -49,5 +54,9 @@ export const routes: Routes = [
           import('./tab3/tab3.page').then((m) => m.Tab3Page),
       }
     ],
+  },  {
+    path: 'welcome3',
+    loadComponent: () => import('./app-pages/welcomes/welcome3/welcome3.page').then( m => m.Welcome3Page)
   }
+
 ];

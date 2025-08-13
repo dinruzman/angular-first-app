@@ -32,3 +32,23 @@
     width: 90%;
     margin: 5%;
 }
+
+.cdot {
+  width: 10px;       /* size of the dot */
+  height: 10px;
+  background-color: red;  /* dot color */
+  border-radius: 50%;     /* makes it circular */
+  display: inline-block;
+  margin: 0 5px; /* spacing between dots */
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;       /* size of the dot */
+  height: 10px;
+  background-color: blue;  /* dot color */
+  border-radius: 50%;     /* makes it circular */
+  display: inline-block;
+  margin: 0 5px; /* spacing between dots */
+  margin-top: 10px;
+}
